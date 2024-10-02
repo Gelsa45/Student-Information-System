@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <h1>Student Information System</h1>
+
+    <!-- Form to add and update students -->
+    <form id="studentForm">
+        <input type="hidden" id="studentId"> <!-- Hidden field to store student ID when updating -->
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="date" id="dob" placeholder="Date of Birth" required>
+        <input type="text" id="gender" placeholder="Gender" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="course" placeholder="Course" required>
+        <button type="submit">Add/Update Student</button>
+    </form>
+
+    <!-- Buttons for various actions -->
+    <div>
+        <button onclick="viewStudents()">View Students</button>
+        <button onclick="deleteStudent()">Delete Student</button>
+    </div>
+
+    <!-- Table to display student information -->
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Actions</th> <!-- For Edit and Delete actions -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Students will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script> <!-- Link to JS -->
+</body>
+</html>
+
